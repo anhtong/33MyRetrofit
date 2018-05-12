@@ -26,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private String getUserLogin (ApiInterface api, UserLoginInfo userLogin){
+        final String[] tk = {""};
        Call<UserLogin> call = api.getUserLogin(userLogin);
        call.enqueue(new Callback<UserLogin>() {
            @Override
@@ -33,6 +34,7 @@ public class LoginActivity extends AppCompatActivity {
                Log.d("LOG", "" + response.code());
                UserLogin u = response.body();
                Log.d("LOG", "" + u.getData().getToken());
+               tk[0] = u.getData().getToken();
            }
 
            @Override
@@ -41,7 +43,6 @@ public class LoginActivity extends AppCompatActivity {
            }
        });
 
-
-        return  "";
+        return tk[0];
     }
 }
