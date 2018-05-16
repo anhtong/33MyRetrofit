@@ -30,4 +30,13 @@ dependencies {
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
     compile 'com.google.code.gson:gson:2.6.2'
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+
+    // Add this line FCM
+    //noinspection GradleCompatible
+    implementation 'com.google.firebase:firebase-core:10.2.0'
+    //noinspection GradleCompatible
+    implementation 'com.google.firebase:firebase-messaging:11.0.4'
 }
+
+// Add to the bottom of the file FCM
+apply plugin: 'com.google.gms.google-services'
