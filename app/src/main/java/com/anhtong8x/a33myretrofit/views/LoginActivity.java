@@ -51,6 +51,5 @@ public class LoginActivity extends AppCompatActivity implements LoginInterface, 
     @Override
     public void onClick(View view) {
         String tk = loginLogic.getTokenLogin(eUserName.getText().toString().trim(),ePassWord.getText().toString().trim());
-
     }
 }

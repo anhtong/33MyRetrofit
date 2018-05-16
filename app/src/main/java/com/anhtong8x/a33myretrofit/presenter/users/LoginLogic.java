@@ -44,7 +44,7 @@ public class LoginLogic implements LoginInterface {
             public void onResponse(Call<ApiResponse<LoginResponse>> call, Response<ApiResponse<LoginResponse>> response) {
                 //Log.d("LOG", "" + response.code());
                 ApiResponse<LoginResponse> u = response.body();
-                Log.d("LOG", "" + u.getData().getToken());
+                //Log.d("LOG", "" + u.getData().getToken());
                 tk[0] = u.getData().getToken();
                 if( !tk[0].equals("") ){view.loginSuccess(tk[0]);}
                 else { view.loginUnSuccess();}
