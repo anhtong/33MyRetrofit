@@ -1,12 +1,13 @@
-package com.anhtong8x.a33myretrofit.models;
+package com.anhtong8x.a33myretrofit.models.users;
 
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Created by Administrator on 5/12/2018.
+ * Created by Administrator on 5/16/2018.
  */
 
-public class UserLoginData {
+public class LoginResponse {
+
     @SerializedName("id")
     int id;
     @SerializedName("username")
@@ -24,7 +25,7 @@ public class UserLoginData {
     @SerializedName("token")
     String token;
 
-    public UserLoginData(int id, String username, String avatar, String email, int sex, String firstName, String lastName, String token) {
+    public LoginResponse(int id, String username, String avatar, String email, int sex, String firstName, String lastName, String token) {
         this.id = id;
         this.username = username;
         this.avatar = avatar;

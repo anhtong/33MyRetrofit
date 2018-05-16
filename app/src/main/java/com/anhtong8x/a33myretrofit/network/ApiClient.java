@@ -1,4 +1,4 @@
-package com.anhtong8x.a33myretrofit.retrofit;
+package com.anhtong8x.a33myretrofit.network;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

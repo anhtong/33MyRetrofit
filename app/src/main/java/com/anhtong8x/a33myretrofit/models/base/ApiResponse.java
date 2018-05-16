@@ -1,12 +1,12 @@
-package com.anhtong8x.a33myretrofit.models;
+package com.anhtong8x.a33myretrofit.models.base;
 
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Created by Administrator on 5/12/2018.
+ * Created by Administrator on 5/14/2018.
  */
 
-public class UserLogin {
+public class ApiResponse<T> {
     @SerializedName("status")
     boolean status;
     @SerializedName("message")
@@ -14,11 +14,11 @@ public class UserLogin {
     @SerializedName("errorCode")
     int errorCode;
     @SerializedName("data")
-    UserLoginData data;
+    T data;
     @SerializedName("totalRecord")
     int totalRecord;
 
-    public UserLogin(boolean status, String message, int errorCode, UserLoginData data, int totalRecord) {
+    public ApiResponse(boolean status, String message, int errorCode, T data, int totalRecord) {
         this.status = status;
         this.message = message;
         this.errorCode = errorCode;
@@ -50,11 +50,11 @@ public class UserLogin {
         this.errorCode = errorCode;
     }
 
-    public UserLoginData getData() {
+    public T getData() {
         return data;
     }
 
-    public void setData(UserLoginData data) {
+    public void setData(T data) {
         this.data = data;
     }
 
